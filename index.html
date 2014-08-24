@@ -100,7 +100,7 @@ nrow(pml.trn); ncol(pml.trn)</code></pre>
 <pre><code>## [1] 20</code></pre>
 <pre><code>## [1] 41</code></pre>
 <p>Two models were initially attempted, k-nearest neighbor and random forest, and both provided similarly accurate results. The results of random forest were used here as this model reports out-of-bag error. The final model is reported.</p>
-<p>Cross validation is used through the trainControl feature providing 10-fold cross-validation and the reported “out-of-bag” (OOB) error estimate is reported at less than 1%.</p>
+<p>Cross validation is used through the trainControl feature providing 10-fold cross-validation and the reported “out-of-bag” (OOB) error estimate is reported to be .56%.</p>
 <pre class="r"><code>tc&lt;-trainControl(method=&quot;cv&quot;);
 modFit&lt;-train(classe~.,&quot;rf&quot;,data=pml.trn, trControl=tc)</code></pre>
 <pre><code>## Loading required package: randomForest
